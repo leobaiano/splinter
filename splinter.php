@@ -141,7 +141,42 @@ if ( ! class_exists( 'Splinter' ) ) :
 			new LB_Post_Type_Splinter( 'teacher', 'Teachers', array( 'title', 'excerpt', 'editor', 'thumbnail' ), self::$text_domain );
 
 			// CPT Classes
-			new LB_Post_Type_Splinter( 'lesson', 'Lessons', array( 'title', 'excerpt', 'editor', 'thumbnail' ), self::$text_domain );
+			new LB_Post_Type_Splinter( 'classes', 'Classes', array( 'title', 'excerpt', 'editor', 'thumbnail' ), self::$text_domain );
+
+		}
+
+		/**
+		* Menu Plugin
+		*
+		*/
+		public function register_custom_menu() {
+
+			new LB_Menu_Splinter('Splinter', array(
+				array( 
+					'name' => 'Courses',
+					'slug' => 'course'
+				),
+
+				array( 
+					'name' => 'Modules',
+					'slug' => 'module'
+				),
+
+				array( 
+					'name' => 'Lessons',
+					'slug' => 'lesson'
+				),
+
+				array( 
+					'name' => 'Teachers',
+					'slug' => 'teacher'
+				),
+
+				array( 
+					'name' => 'Classes',
+					'slug' => 'classes'
+				)
+			) );
 
 		}
 
