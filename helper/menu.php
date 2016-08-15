@@ -28,10 +28,10 @@ class LB_Menu_Splinter {
 	}
 
 	public function custom_menu() {
-		add_menu_page( $this->name, $this->name, 'edit_posts', $this->slugs[0]['slug'], 'MENU_CB' );
+		add_menu_page( $this->name, $this->name, 'edit_posts', 'edit.php?post_type='. $this->slugs[0]['slug'], '' );
 
 	    	foreach ($this->slugs as $key => $value) {
-	    		add_submenu_page( $this->slugs[0]['slug'], $value['name'], $value['name'], 'edit_posts', $this->slugs[0]['slug'], 'MENU_CB' );
+	    		add_submenu_page( 'edit.php?post_type='. $this->slugs[0]['slug'], $value['name'], $value['name'], 'edit_posts', 'edit.php?post_type='. 	$value['slug'], '' );
 	    	}
 	}
 }
