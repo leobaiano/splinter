@@ -57,6 +57,9 @@ if ( ! class_exists( 'Splinter' ) ) :
 
 			// Create CPT`s
 			add_action( 'init', array( $this, 'create_cpts' ) );
+
+			// Menu
+			add_action( 'admin_menu', array( $this, 'register_custom_menu' ) );
 		}
 
 		/**
@@ -139,6 +142,26 @@ if ( ! class_exists( 'Splinter' ) ) :
 
 			// CPT Classes
 			new LB_Post_Type_Splinter( 'lesson', 'Lessons', array( 'title', 'excerpt', 'editor', 'thumbnail' ), self::$text_domain );
+
+		}
+
+		/**
+		* Menu Plugin
+		*
+		*/
+		public function register_custom_menu() {
+
+			new LB_Menu_Splinter('Splinter', array(
+				array( 
+					'name' => 'Courses',
+					'slug' => 'course'
+				),
+
+				array( 
+					'name' => 'Modules',
+					'slug' => 'module'
+				)
+			) );
 
 		}
 

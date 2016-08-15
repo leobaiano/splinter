@@ -67,7 +67,7 @@ class LB_Post_Type_Splinter {
 			'supports' => $this->supports,
 			'public' => true,
 			'show_ui' => true,
-			'show_in_menu' => true,
+			'show_in_menu' => false,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
