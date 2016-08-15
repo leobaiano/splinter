@@ -152,49 +152,29 @@ if ( ! class_exists( 'Splinter' ) ) :
 		public function register_custom_menu() {
 
 			new LB_Menu_Splinter('Splinter', array(
-				array( 
+				array(
 					'name' => 'Courses',
 					'slug' => 'course'
 				),
 
-				array( 
+				array(
 					'name' => 'Modules',
 					'slug' => 'module'
 				),
 
-				array( 
+				array(
 					'name' => 'Lessons',
 					'slug' => 'lesson'
 				),
 
-				array( 
+				array(
 					'name' => 'Teachers',
 					'slug' => 'teacher'
 				),
 
-				array( 
+				array(
 					'name' => 'Classes',
 					'slug' => 'classes'
-				)
-			) );
-
-		}
-
-		/**
-		* Menu Plugin
-		*
-		*/
-		public function register_custom_menu() {
-
-			new LB_Menu_Splinter('Splinter', array(
-				array( 
-					'name' => 'Courses',
-					'slug' => 'course'
-				),
-
-				array( 
-					'name' => 'Modules',
-					'slug' => 'module'
 				)
 			) );
 
